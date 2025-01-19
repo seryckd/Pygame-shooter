@@ -1,0 +1,9 @@
+{
+  "frames" : [
+    { "name": "red-1", "frame": {"x":2, "y":42, "w":6, "h":12}}
+  ],
+  "meta": {
+    "image": "bullets.png",
+    "colorkey": "0xBFDCBF"
+  }
+}
