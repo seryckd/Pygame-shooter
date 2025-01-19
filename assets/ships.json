@@ -1,0 +1,9 @@
+{
+  "frames" : [
+    { "name": "tri", "frame": {"x":51, "y":4, "w":19, "h":24}}
+  ],
+  "meta": {
+    "image": "ships.png",
+    "colorkey": "0xBFDCBF"
+  }
+}

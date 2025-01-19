@@ -1,0 +1,13 @@
+{
+  "frames" : [
+    { "name": "carrot-l2", "frame": {"x":4, "y":84, "w":15, "h":28}},
+    { "name": "carrot-l1", "frame": {"x":28, "y":84, "w":15, "h":28}},
+    { "name": "carrot", "frame": {"x":52, "y":84, "w":15, "h":28}},
+    { "name": "carrot-r1", "frame": {"x":76, "y":85, "w":15, "h":28}},
+    { "name": "carrot-r2", "frame": {"x":100, "y":85, "w":15, "h":28}}
+  ],
+  "meta": {
+    "image": "sheet1.png",
+    "colorkey": "0xBFDCBF"
+  }
+}
