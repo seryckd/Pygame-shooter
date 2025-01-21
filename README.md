@@ -14,6 +14,9 @@ python game.py
 pip3 install pygbag
 ```
 
+[Play on GitHub here](http://seryckd.github.io/Pygame-shooter/web/index.html)
+
+
 # Thanks
 
 Art by Daniel Cook (https://lostgarden.home.blog/)
