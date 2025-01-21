@@ -1,5 +1,7 @@
 import pygame
+
 import spritesheet
+
 
 class BulletSprite(pygame.sprite.Sprite):
 
@@ -8,7 +10,7 @@ class BulletSprite(pygame.sprite.Sprite):
 
     @staticmethod
     def load():
-        sheet = spritesheet.spritesheet("assets/bullets.png", "assets/bullets.json")
+        sheet = spritesheet.spritesheet("bullets.png", "bullets.json")
         BulletSprite.images = sheet.image_names(["red-1"], scale2x=True)
 
     def __init__(self, image_name, start_x, start_y):

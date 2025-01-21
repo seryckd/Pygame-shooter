@@ -1,4 +1,5 @@
 import pygame
+
 import spritesheet
 import bullet
 import explosion
@@ -10,7 +11,7 @@ class ShipSprite(pygame.sprite.Sprite):
 
     @staticmethod
     def load():
-        sheet = spritesheet.spritesheet("assets/ships.png", "assets/ships.json")
+        sheet = spritesheet.spritesheet("ships.png", "ships.json")
         ShipSprite.images = sheet.image_names(["tri"], scale2x=True)
 
     def __init__(self, image_name, start_x, start_y):

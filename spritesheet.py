@@ -1,3 +1,6 @@
+import os
+from pathlib import Path
+
 import pygame
 import json
 
@@ -18,8 +21,9 @@ import json
 """
 class spritesheet(object):
     def __init__(self, imagefile, datafile=None):
+        path = os.path.join(Path(__file__).parent, 'assets')
         try:
-            self.sheet = pygame.image.load(imagefile).convert()             
+            self.sheet = pygame.image.load(os.path.join(path, imagefile)).convert()             
         except pygame.error as e:
             print(f"Unable to load spritesheet image: {imagefile}")
             print(e)
@@ -29,7 +33,7 @@ class spritesheet(object):
         self.assemblies = {}
         self.colorkey = None
         if datafile:
-            with open(datafile, 'r') as f:
+            with open(os.path.join(path, datafile), 'r') as f:
                 data = json.load(f)
                 for frame in data["frames"]:
                     self.frames[frame["name"]] = frame["frame"]
