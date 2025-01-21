@@ -1,4 +1,5 @@
 import pygame
+
 import spritesheet
 
 class ExplosionSprite(pygame.sprite.Sprite):
@@ -8,7 +9,7 @@ class ExplosionSprite(pygame.sprite.Sprite):
 
     @staticmethod
     def load():
-        ExplosionSprite.sheet = spritesheet.spritesheet("assets/explosions.png", "assets/explosions.json")
+        ExplosionSprite.sheet = spritesheet.spritesheet("explosions.png", "explosions.json")
 
     def __init__(self, name, start_x, start_y):
         """

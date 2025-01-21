@@ -8,8 +8,17 @@ pip3 install pygame
 python game.py 
 ```
 
+# Browser
 
-# sds
+```
+pip3 install pygbag
+```
+
+# Thanks
 
 Art by Daniel Cook (https://lostgarden.home.blog/)
+
+
+https://rabbid76.github.io/PyGameExamplesAndAnswers/documentation/pygame/pygame_in_web_browser.html
+
 
