@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ $default-branch ]
 
-permissions:
-  contents: read
+# permissions:
+#   contents: read
 
 jobs:
   build:
@@ -37,9 +37,27 @@ jobs:
     #   run: |
     #     pytest
 
-    # - name: Build the site
-    #   run: |
-    #     pip install pygbag
-    #     name=${PWD##*/}
-    #     cd ..
-    #     pygbag --build $name
+    - name: Setup github config
+      run: |
+        git config --global user.email "<>"
+        git config --global user.name "github-actions[bot]"
+
+    - name: Build the site
+      run: |
+        pip install pygbag
+        pip install -r requirements.txt
+        pybag --build Pygame-shooter
+
+        name=${PWD##*/}
+        cd ..
+        pygbag --build $name
+        cd $name
+
+    - name: Commit changes
+      run: |
+        # -f to override .gitignore
+        git add -f build/web
+        git commit -m "New version"
+        git push origin gh-pages
+
+

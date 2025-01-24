@@ -10,11 +10,20 @@ python game.py
 
 # Browser
 
-```
-pip3 install pygbag
-```
 
 [Play on GitHub here](http://seryckd.github.io/Pygame-shooter/web/index.html)
+
+
+# Pages
+
+```
+pip3 install pygbag
+cd ..
+pybag --build Pygame-shooter
+cp Pygame-shooter/build/web Pygame-shooter/web
+
+push into ph-pages branch
+```
 
 
 # Thanks
