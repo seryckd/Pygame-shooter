@@ -42,7 +42,7 @@ class Game:
 
         enemyship.ShipSprite("tri", 100, 100)
         enemyship.ShipSprite("tri", 150, 100)
-        enemyship.ShipSprite("tri", 200, 100)
+        # enemyship.ShipSprite("tri", 200, 100)
 
         self.x_cool_down = 0
 
