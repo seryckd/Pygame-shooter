@@ -56,8 +56,7 @@ jobs:
     - name: Commit changes
       run: |
         # -f to override .gitignore
+        git switch gh-pages
         git add -f build/web
         git commit -m "New version"
-        git push origin gh-pages
-
-
+        git push origin master
