@@ -50,9 +50,22 @@ class Game:
         # drain the event queue
         # pygame.QUIT event means the user clicked X to close your window
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
                 self.running = False
                 return False
+            
+            if event.type == pygame.FINGERDOWN:
+                print(f"finger down id:{event.finder_id} x:{event.x} y:{event.y} dx:{event.dx} dy:{event.dy}")
+            elif event.type == pygame.FINGERUP:
+                print(f"finger up id:{event.finder_id} x:{event.x} y:{event.y} dx:{event.dx} dy:{event.dy}")
+            elif event.type == pygame.FINGERMOTION:
+                print(f"finger motion id:{event.finder_id} x:{event.x} y:{event.y} dx:{event.dx} dy:{event.dy}")
+            elif event.type == pygame.MOUSEBUTTONUP:
+                print(f"mouse button up pos:{event.pos} button:{event.button} touch:{event.touch}")
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                print(f"mouse button down pos:{event.pos} button:{event.button} touch:{event.touch}")
+            elif event.type == pygame.MOUSEMOTION:
+                print(f"mouse motion pos:{event.pos} rel:{event.rel} button:{event.buttons} touch:{event.touch}")
 
         keys = pygame.key.get_pressed()
         self.x_cool_down = max(self.x_cool_down - self.dt, 0)
