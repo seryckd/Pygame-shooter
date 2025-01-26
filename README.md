@@ -11,7 +11,7 @@ python game.py
 # Browser
 
 
-[Play on GitHub here](http://seryckd.github.io/Pygame-shooter/web/index.html)
+[Play on GitHub here](http://seryckd.github.io/Pygame-shooter/index.html)
 
 
 # Pages
@@ -28,9 +28,8 @@ push into ph-pages branch
 
 # Thanks
 
-Art by Daniel Cook (https://lostgarden.home.blog/)
+[Art by Daniel Cook from Lost Garden](https://lostgarden.home.blog/)
 
+[Pygame](https://www.pygame.org)
 
-https://rabbid76.github.io/PyGameExamplesAndAnswers/documentation/pygame/pygame_in_web_browser.html
-
-
+[Pygbag - Python to Web Assembly](https://pygame-web.github.io)
