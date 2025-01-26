@@ -7,6 +7,9 @@ import bullet
 import enemyship
 import explosion
 
+if (web := sys.platform in ('emscripten','wasi')):
+    from platform import window
+
 class TestSprite(pygame.sprite.Sprite):
     group = pygame.sprite.Group()
 
@@ -52,6 +55,8 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
                 self.running = False
+                if web:
+                    window.console("hellofr om me")
                 return False
             
             if event.type == pygame.FINGERDOWN:
