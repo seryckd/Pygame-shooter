@@ -5,7 +5,7 @@ python3 -m venv ./venv
 pip3 install pygame
 
 . ./env/bin/sctivate
-python game.py 
+python main.py 
 ```
 
 # Browser

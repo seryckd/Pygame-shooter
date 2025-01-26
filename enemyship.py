@@ -1,4 +1,5 @@
 import pygame
+import math
 
 import spritesheet
 import bullet
@@ -22,6 +23,9 @@ class ShipSprite(pygame.sprite.Sprite):
         self.rect.x = start_x
         self.rect.y = start_y
 
+        self.update_dt = 0
+        self.update_x = 5
+
         self.add(ShipSprite.group)
 
     def update(self, dt):
@@ -30,3 +34,14 @@ class ShipSprite(pygame.sprite.Sprite):
             self.kill()
             explosion.ExplosionSprite(
                 "bigred", self.rect.x + self.rect.w/2, self.rect.y + self.rect.h/2)
+
+        self.update_dt = max(self.update_dt - dt, 0)
+
+        if self.update_dt == 0:
+            self.update_dt = 30
+
+            self.rect.x += self.update_x
+
+            if self.rect.x > (pygame.display.get_surface().get_width() - self.rect.width) or self.rect.x < 0:
+                self.update_x = -self.update_x
+            

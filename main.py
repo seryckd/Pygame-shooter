@@ -62,8 +62,8 @@ class Game:
             self.x_cool_down = 200
 
         self.all_sprites.update(self.dt)
-        enemyship.ShipSprite.group.update(self.dt)
         bullet.BulletSprite.group.update(self.dt)
+        enemyship.ShipSprite.group.update(self.dt)
         explosion.ExplosionSprite.group.update(self.dt)
         TestSprite.group.update()
 
